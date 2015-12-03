@@ -9,4 +9,4 @@ An automated build of this package is on [Docker Hub](https://hub.docker.com/r/d
 # Example Use
 
     FROM danieldent/powerdns
-    CMD ["/sbin/pidunu", "/usr/sbin/pdns_server",  "--no-config", "--launch=remote", "--remote-connection-string=http:url=http://example.com/jsonendpoint"]
+    CMD ["/sbin/pidunu", "/usr/sbin/pdns_server", "--setuid=pdns", "--setgid=pdns", "--no-config", "--launch=remote", "--remote-connection-string=http:url=http://example.com/jsonendpoint"]
